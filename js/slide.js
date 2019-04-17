@@ -55,6 +55,7 @@ onEnd(event) {
     this.onEnd = this.onEnd.bind(this);
   }
 
+
   // Slides config
 
 slidePosition(slide) {
@@ -76,13 +77,16 @@ slidesIndexNav (index) {
     prev: index ? index - 1 : undefined,
     active: index,
     next: index === last ? undefined : index + 1,
+
   }
 }
 
 changeSlide(index) {
+
   const activeSlide = this.slidesArray[index];
   this.moveSlide(activeSlide.position);    
   this.slidesIndexNav(index);  
+
   this.dist.finalPosition = activeSlide.position;
 }
 
